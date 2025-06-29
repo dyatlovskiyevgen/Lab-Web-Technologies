@@ -1,0 +1,92 @@
+﻿@using OSS30333.Domain
+@using OSS30333.Domain.Models
+@* @model IEnumerable<OSS30333.Domain.Entities.Product> *@
+@model ProductListModel<Product>
+
+@{ 
+    ViewData["Title"] = "Index"; 
+    var request = ViewContext.HttpContext.Request; 
+    var returnUrl = request.Path + request.QueryString.ToUriComponent(); 
+ 
+    var categories = ViewData["categories"] as IEnumerable<Category> ?? new List<Category>();
+
+    var category = request.Query["category"].ToString();
+    var currentCategory = ViewData["currentCategory"] as string ?? "Все";
+    var error = ViewData["Error"] as string;
+ } 
+ 
+  @if (TempData["SuccessMessage"] is string message)
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <i class="fa-solid fa-circle-check"></i> @message
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+
+ <h2 class="m-3">Каталог</h2>
+<div class="row">
+    <!-- выбор категории -->
+    <div class="col-2 border-2">
+        <ul class="nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"
+                   data-bs-toggle="dropdown"
+                   href="#"
+                   role="button"
+                   aria-expanded="false">
+                    @currentCategory
+                </a>
+                <ul class="dropdown-menu">
+                    <li>
+                        <a class="dropdown-item"
+                           asp-controller="product"
+                           asp-route-category=@null>Все</a>
+                    </li>
+                    @foreach (var item in categories)
+                    {
+                        <li>
+                            <a class="dropdown-item"
+                               asp-controller="product"
+                               asp-route-category="@item.NormalizedName">
+                                @item.Name
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="col-10">
+        @if (Model?.Items?.Any() == true)
+        {
+            <div class="card-group">
+                @foreach (var item in Model.Items)
+                {
+                    <partial name="_ProductItemPartial" model="item" />
+                }
+            </div>
+
+            <div class="mt-3">
+                <pager page-current="@Model.CurrentPage"
+                       page-total="@Model.TotalPages"
+                       action="Index"
+                       controller="Product"
+                       category="@category"></pager>
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-info mt-3">
+                Товары не найдены
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(error))
+        {
+            <h2 class="text-warning mt-3">@error</h2>
+        }
+    </div>
+</div>
+

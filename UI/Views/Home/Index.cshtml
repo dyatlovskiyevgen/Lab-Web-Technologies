@@ -1,0 +1,90 @@
+﻿@* Index.cshtml *@
+
+@{
+    ViewData["Title"] = "Index page";
+
+    var lst = ViewData["Lst"] as SelectList;
+}
+
+        <h1>@ViewData["LabWorkTitle"]</h1>
+        <h3>Список</h3>      
+        <ol type="A">
+            @for (int i = 0; i < 5; i++)
+            {
+                <li>элемент @i списка</li>
+            }
+        </ol>
+        <hr>             
+        <h3>Форма</h3>
+        <!-- Horizontal form *start* -->
+        <form method="get" action="Index.html">       
+            <!-- Выпадающий список -->            
+            <div class="row mb-3">
+                <label class="col-sm-2 col-form-label">Выберите элемент</label>
+                <div class="col-sm-10">
+                    <select class="form-select" asp-items="@lst">
+                        <option value="">-- Выберите --</option>
+                    </select>
+                </div>
+            </div>
+    
+            <!-- Чекбоксы -->
+            <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input me-2" type="checkbox" name="formcheckbox" id="gridCheck1">
+                        <label class="form-check-label" for="gridCheck1">
+                            Чек-бокс 1
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-10 offset-sm-2">
+                    <div class="form-check d-flex align-items-center">
+                        <input class="form-check-input me-2" type="checkbox" name="formcheckbox" id="gridCheck2">
+                        <label class="form-check-label" for="gridCheck2">
+                            Чек-бокс 2
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <!-- Радио-кнопки -->
+            <fieldset class="row mb-3">
+                <div class="col-sm-12 offset-sm-2" >
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked >
+                        <label class="form-check-label" for="gridRadios1">
+                            Радио-1
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                        <label class="form-check-label" for="gridRadios2">
+                            Радио-2
+                        </label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="option3">
+                        <label class="form-check-label" for="gridRadios3">
+                            Радио-3
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="row mb-3">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Логин</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Введите имя">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Пароль</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Введите пароль">
+                </div>
+            </div>         
+            <button type="submit" class="btn btn-primary">Отправить</button>
+        </form>
+        <!-- Horizontal form *end* -->
+    

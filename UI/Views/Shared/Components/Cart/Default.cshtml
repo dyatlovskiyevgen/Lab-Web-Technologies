@@ -1,0 +1,21 @@
+﻿@using OSS30333.Domain.Entities
+@model Cart
+
+@{
+    var items = Model?.CartItems ?? new Dictionary<int, CartItem>();
+    var total = Model?.TotalPrice ?? 0;
+    var count = Model?.Count ?? 0;
+}
+
+<a asp-controller="Cart" asp-action="Index" class="navbar-text ms-auto">
+    @total руб <i class="fa-solid fa-cart-shopping"></i> (@count)
+</a>
+
+
+
+
+
+@* <a asp-controller="Cart" asp-action="Index" class="navbar-text ms-auto">
+    @(Model?.TotalPrice ?? 0) руб <i class="fa-solid fa-cart-shopping"></i> (@(Model?.Count ?? 0))
+</a>
+ *@

@@ -1,0 +1,55 @@
+﻿@using Microsoft.AspNetCore.Components
+@implements IDisposable
+@rendermode InteractiveServer
+
+<h3>List</h3>
+@if (productService.Products != null && productService.Products.Count()!=0)
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Название</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in productService.Products)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>
+                        <button class="btn btn-outline-dark"
+                                @onclick="@(() => OnProductSelected(item.Id))">
+                            Подробно
+                        </button>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+}
+
+
+@code {
+    [CascadingParameter]
+    IProductService<Product> productService { get; set; }
+
+    [Parameter]
+    public EventCallback<int> ProductSelected { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        productService.ListChanged += StateHasChanged;
+    }
+
+    public async void OnProductSelected(int id)
+    {
+        await ProductSelected.InvokeAsync(id);
+    }
+
+    public void Dispose()
+    {
+        productService.ListChanged -= StateHasChanged;
+    }
+}

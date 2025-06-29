@@ -1,0 +1,64 @@
+﻿@* _UserInfoPartial.cshtml *@
+
+@using Microsoft.AspNetCore.Identity
+
+@if (User?.Identity?.IsAuthenticated == true)// (User.Identity.IsAuthenticated)
+{
+        <!-- Информация пользователя -->
+        @await Component.InvokeAsync("Cart")
+
+    <div class="dropdown ms-4 nav-color">
+        <button class="btn btn-secondary dropdown-toggle"
+        type="button" id="dropdownMenuButton"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+            @User.Claims.FirstOrDefault(c => c.Type.Equals("Name", 
+            StringComparison.OrdinalIgnoreCase))?.Value
+            @* <img src="images/rabbit.jpg" width="30"
+            alt="User" class="rounded nav-color" /> *@
+            @* 
+            <img src="@Url.Action("GetAvatar","Image")"
+                 width="30" alt="User"
+                 class="rounded bg-light" /> *@
+           @*  <img src="@Url.Action("GetAvatar", "Image")?v=@Guid.NewGuid()"
+                 width="30" alt="User" class="rounded bg-light" /> *@
+            <img img-action="GetAvatar" img-controller="Image" width="30" alt="User" class="rounded bg-light" />
+
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li>
+                <span class="dropdown-item-text">
+                    @* <img src="images/rabbit.jpg"
+                    width="50" alt="User" class="rounded" /> *@
+                    @* <img src="@Url.Action("GetAvatar","Image")"
+                         width="50" alt="User" class="rounded" /> *@
+                    @* <img src="@Url.Action("GetAvatar", "Image")?v=@Guid.NewGuid()"
+                         width="30" alt="User" class="rounded bg-light" /> *@
+                    <img img-action="GetAvatar" img-controller="Image" width="30" alt="User" class="rounded bg-light" />
+                    @User.Identity?.Name!
+                </span>
+            </li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <form id="logoutForm" class="form-inline"
+                asp-area="Identity" asp-page="/Account/Logout">
+                    <button id="logout" type="submit" class="nav-link btn btn-link text-dark">
+                        Logout
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </div>
+    <!-- Информация пользователя - конец -->
+}
+else
+{
+    <div class="navbar-nav ms-auto">
+    <li class="nav-item">
+        <a class="nav-link nav-color" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link nav-color" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+    </div>
+}

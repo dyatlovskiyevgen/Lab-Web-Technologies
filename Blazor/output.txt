@@ -1,0 +1,228 @@
+Структура папок тома Новый том
+Серийный номер тома: D666-1608
+D:.
+|   appsettings.Development.json
+|   appsettings.json
+|   OSS.Blazor.csproj
+|   OSS.Blazor.csproj.user
+|   output.txt
+|   Products.razor
+|   Program.cs
+|   
++---bin
+|   \---Debug
+|       \---net9.0
+|               appsettings.Development.json
+|               appsettings.json
+|               Microsoft.AspNetCore.Authorization.dll
+|               Microsoft.AspNetCore.Components.dll
+|               Microsoft.AspNetCore.Components.Forms.dll
+|               Microsoft.AspNetCore.Components.Web.dll
+|               Microsoft.AspNetCore.Metadata.dll
+|               Microsoft.Extensions.DependencyInjection.Abstractions.dll
+|               Microsoft.Extensions.DependencyInjection.dll
+|               Microsoft.Extensions.Logging.Abstractions.dll
+|               Microsoft.Extensions.Options.dll
+|               Microsoft.Extensions.Primitives.dll
+|               Microsoft.JSInterop.dll
+|               OSS.Blazor.deps.json
+|               OSS.Blazor.dll
+|               OSS.Blazor.exe
+|               OSS.Blazor.pdb
+|               OSS.Blazor.runtimeconfig.json
+|               OSS.Blazor.staticwebassets.endpoints.json
+|               OSS.Blazor.staticwebassets.runtime.json
+|               OSS30333.Domain.dll
+|               OSS30333.Domain.pdb
+|               
++---Components
+|   |   App.razor
+|   |   Routes.razor
+|   |   _Imports.razor
+|   |   
+|   +---Layout
+|   |       MainLayout.razor
+|   |       MainLayout.razor.css
+|   |       NavMenu.razor
+|   |       NavMenu.razor.css
+|   |       
+|   +---Pages
+|   |       Counter.razor
+|   |       Error.razor
+|   |       Home.razor
+|   |       Weather.razor
+|   |       
+|   \---ProductComponents
+|           List.razor
+|           Pager.razor
+|           ProductDetails.razor
+|           
++---obj
+|   |   OSS.Blazor.csproj.nuget.dgspec.json
+|   |   OSS.Blazor.csproj.nuget.g.props
+|   |   OSS.Blazor.csproj.nuget.g.targets
+|   |   project.assets.json
+|   |   project.nuget.cache
+|   |   
+|   \---Debug
+|       \---net9.0
+|           |   .NETCoreApp,Version=v9.0.AssemblyAttributes.cs
+|           |   ApiEndpoints.json
+|           |   apphost.exe
+|           |   OSS.Blazor.AssemblyInfo.cs
+|           |   OSS.Blazor.AssemblyInfoInputs.cache
+|           |   OSS.Blazor.assets.cache
+|           |   OSS.Blazor.csproj.AssemblyReference.cache
+|           |   OSS.Blazor.csproj.BuildWithSkipAnalyzers
+|           |   OSS.Blazor.csproj.CoreCompileInputs.cache
+|           |   OSS.Blazor.csproj.FileListAbsolute.txt
+|           |   OSS.Blazor.csproj.Up2Date
+|           |   OSS.Blazor.dll
+|           |   OSS.Blazor.GeneratedMSBuildEditorConfig.editorconfig
+|           |   OSS.Blazor.genruntimeconfig.cache
+|           |   OSS.Blazor.GlobalUsings.g.cs
+|           |   OSS.Blazor.MvcApplicationPartsAssemblyInfo.cache
+|           |   OSS.Blazor.pdb
+|           |   rbcswa.dswa.cache.json
+|           |   rjimswa.dswa.cache.json
+|           |   rjsmcshtml.dswa.cache.json
+|           |   rjsmrazor.dswa.cache.json
+|           |   rpswa.dswa.cache.json
+|           |   staticwebassets.build.endpoints.json
+|           |   staticwebassets.build.json
+|           |   staticwebassets.build.json.cache
+|           |   staticwebassets.development.json
+|           |   staticwebassets.references.upToDateCheck.txt
+|           |   staticwebassets.removed.txt
+|           |   staticwebassets.upToDateCheck.txt
+|           |   
+|           +---compressed
+|           |       0d06e5btmt-s35ty4nyc5.gz
+|           |       0v63n6xd0v-tdbxkamptv.gz
+|           |       1i4c86ljcp-493y06b0oq.gz
+|           |       1mf3htfbl5-jj8uyg4cgr.gz
+|           |       2jxdvk6dox-ub07r2b239.gz
+|           |       3sbw8it5ks-h1s4sie4z3.gz
+|           |       4a4evd9rwv-iovd86k7lj.gz
+|           |       5h52gjkkk2-khv3u5hwcm.gz
+|           |       62pkwwpk8i-aexeepp0ev.gz
+|           |       65ofd3vulm-hrwsygsryq.gz
+|           |       6nbhenf3bu-06098lyss8.gz
+|           |       8m7us6k2sa-v0zj4ognzu.gz
+|           |       9thr6vs1gt-b7pk76d08c.gz
+|           |       a5gv2ad4n6-6pdc2jztkx.gz
+|           |       a8z7703wu9-fvhpjtyr6v.gz
+|           |       crplki4jkj-dxx9fxp4il.gz
+|           |       d23qxlhqii-y7v9cxd14o.gz
+|           |       eav1v49c0b-0j3bgjxly4.gz
+|           |       elmpojr9mj-lcd1t2u6c8.gz
+|           |       eyjvnqnj8t-pk9g2wxc8p.gz
+|           |       h5c268sijx-63fj8s7r0e.gz
+|           |       hy3t7fajl4-khy4lop6wu.gz
+|           |       j514x1g027-fsbi9cje9m.gz
+|           |       kvrbkluxkc-ausgxo2sd3.gz
+|           |       mma32xl7xy-pj5nd1wqec.gz
+|           |       njv8yucrvb-k8d9w2qqmf.gz
+|           |       oesb9mg0cp-c2jlpeoesf.gz
+|           |       oj8zo5hpfj-bqjiyaj88i.gz
+|           |       pf0rc6ibu5-vr1egmr9el.gz
+|           |       phkv2nhnsv-c2oey78nd0.gz
+|           |       qbjdazvkga-notf2xhcfb.gz
+|           |       qvdab8o33b-rzd6atqjts.gz
+|           |       qz4q7y180m-ft3s53vfgj.gz
+|           |       r5rovsf8q7-37tfw0ft22.gz
+|           |       sisxv1rx0w-kbrnm935zg.gz
+|           |       spt4ieb1x3-cosvhxvwiu.gz
+|           |       t1ssejiuch-w7b1ic09ft.gz
+|           |       tkqt4k56u5-nvvlpmu67g.gz
+|           |       u071tqe4ux-r4e9w2rdcm.gz
+|           |       u11e4cjsw5-d7shbmvgxk.gz
+|           |       vtj80bcj5n-6cfz1n2cew.gz
+|           |       w4esk2d9lm-46ein0sx1k.gz
+|           |       w54haj0343-ee0r1s7dh0.gz
+|           |       x4wtaayaqu-j5mq2jizvt.gz
+|           |       y7vwonqk5w-erw9l3u2r3.gz
+|           |       yl04pfbp7c-w7b1ic09ft.gz
+|           |       zeit0ibdtj-jd9uben2k1.gz
+|           |       
+|           +---ref
+|           |       OSS.Blazor.dll
+|           |       
+|           +---refint
+|           |       OSS.Blazor.dll
+|           |       
+|           +---scopedcss
+|           |   +---bundle
+|           |   |       OSS.Blazor.styles.css
+|           |   |       
+|           |   +---Components
+|           |   |   \---Layout
+|           |   |           MainLayout.razor.rz.scp.css
+|           |   |           NavMenu.razor.rz.scp.css
+|           |   |           
+|           |   \---projectbundle
+|           |           OSS.Blazor.bundle.scp.css
+|           |           
+|           \---staticwebassets
++---Properties
+|       launchSettings.json
+|       
++---Services
+|       APIProductService.cs
+|       IProductService.cs
+|       
+\---wwwroot
+    |   app.css
+    |   favicon.png
+    |   
+    \---lib
+        \---bootstrap
+            \---dist
+                +---css
+                |       bootstrap-grid.css
+                |       bootstrap-grid.css.map
+                |       bootstrap-grid.min.css
+                |       bootstrap-grid.min.css.map
+                |       bootstrap-grid.rtl.css
+                |       bootstrap-grid.rtl.css.map
+                |       bootstrap-grid.rtl.min.css
+                |       bootstrap-grid.rtl.min.css.map
+                |       bootstrap-reboot.css
+                |       bootstrap-reboot.css.map
+                |       bootstrap-reboot.min.css
+                |       bootstrap-reboot.min.css.map
+                |       bootstrap-reboot.rtl.css
+                |       bootstrap-reboot.rtl.css.map
+                |       bootstrap-reboot.rtl.min.css
+                |       bootstrap-reboot.rtl.min.css.map
+                |       bootstrap-utilities.css
+                |       bootstrap-utilities.css.map
+                |       bootstrap-utilities.min.css
+                |       bootstrap-utilities.min.css.map
+                |       bootstrap-utilities.rtl.css
+                |       bootstrap-utilities.rtl.css.map
+                |       bootstrap-utilities.rtl.min.css
+                |       bootstrap-utilities.rtl.min.css.map
+                |       bootstrap.css
+                |       bootstrap.css.map
+                |       bootstrap.min.css
+                |       bootstrap.min.css.map
+                |       bootstrap.rtl.css
+                |       bootstrap.rtl.css.map
+                |       bootstrap.rtl.min.css
+                |       bootstrap.rtl.min.css.map
+                |       
+                \---js
+                        bootstrap.bundle.js
+                        bootstrap.bundle.js.map
+                        bootstrap.bundle.min.js
+                        bootstrap.bundle.min.js.map
+                        bootstrap.esm.js
+                        bootstrap.esm.js.map
+                        bootstrap.esm.min.js
+                        bootstrap.esm.min.js.map
+                        bootstrap.js
+                        bootstrap.js.map
+                        bootstrap.min.js
+                        bootstrap.min.js.map
+                        
